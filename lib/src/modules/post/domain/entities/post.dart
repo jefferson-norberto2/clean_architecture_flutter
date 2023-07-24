@@ -6,5 +6,5 @@ class Post{
   final String text;
   final int totalComments;
 
-  Post(this.id, this.user, this.text, this.totalComments);
+  Post({required this.id, required this.user, required this.text, required this.totalComments});
 }

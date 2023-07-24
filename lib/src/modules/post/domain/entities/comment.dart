@@ -2,5 +2,5 @@ class Comment {
   final String id;
   final String text;
 
-  Comment(this.id, this.text);
+  Comment({required this.id, required this.text});
 }
