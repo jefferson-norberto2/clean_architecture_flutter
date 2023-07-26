@@ -8,3 +8,7 @@ abstract class IPostException {
 class ArgumentsException extends IPostException {
   const ArgumentsException(super.message, [super.stackTrace]);
 }
+
+class DataSourcePostException extends IPostException {
+  const DataSourcePostException(super.message, [super.stackTrace]);
+}

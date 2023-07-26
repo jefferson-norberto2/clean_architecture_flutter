@@ -10,9 +10,9 @@ import '../adapters/post_adapter.dart';
 import '../datasources/comment_datasource.dart';
 
 class PostRepository extends IPostRepository {
-  final UserDatasource datasource;
-  final PostDatasource postDatasource;
-  final CommentDatasource commentDatasource;
+  final IUserDatasource datasource;
+  final IPostDatasource postDatasource;
+  final ICommentDatasource commentDatasource;
 
   PostRepository(this.datasource, this.postDatasource, this.commentDatasource);
 
