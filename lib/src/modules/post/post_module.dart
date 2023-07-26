@@ -11,6 +11,8 @@ import 'infra/datasources/comment_datasource.dart';
 import 'infra/datasources/post_datasource.dart';
 import 'infra/datasources/user_datasource.dart';
 import 'infra/repositories/post_repository.dart';
+import 'presenter/pages/post_page.dart';
+import 'presenter/stores/post_store.dart';
 
 class PostModule extends Module{
   @override
@@ -29,10 +31,13 @@ class PostModule extends Module{
     //usecase
     Bind.factory((i) => GetPost(i())),
     Bind.factory((i) => GetPostsComments(i())),
+
+    //store
+    Bind.singleton((i) => PostStore(i())),
   ];
 
   @override
   final List<ModularRoute> routes = [
-    // ChildRoute('/', child: (_, args) => PostPage()),
+    ChildRoute('/', child: (context, args) => PostPage()),
   ];
 }
